@@ -1,63 +1,61 @@
 # GUI Agent Collection
 
-A curated, evolving knowledge base for **GUI Agents**, **Computer Use Agents (CUA)**, and multimodal agents that perceive and act in digital environments.
+持续收集和整理 **GUI Agent**、**Computer Use Agent（CUA）** 以及多模态 Agent 的论文、模型、Benchmark、环境和工程实现。
 
-> Status: initialized. Entries include primary-source links and research questions; deeper code/paper audits are tracked separately.
+> 当前阶段：初步收录。优先保留原始资料和技术线索；论文精读、源码审查和实验复现将逐步补充。
 
-## Collected work
+## 已收录项目
 
-| Project | Focus | Sources | Notes |
+| 项目 | 研究方向 | 原始资料 | 关键线索 |
 | --- | --- | --- | --- |
-| [WebHarbor](environments/webharbor.md) | Offline cloned websites, Web Agent benchmark, RL environment, task verifiers | [Paper](https://arxiv.org/abs/2611.03634) · [Code](https://github.com/aiming-lab/WebHarbor) · [Environments/model](https://huggingface.co/collections/ChilleD/webharbor) | 153 environments, 3,518 tasks (authors' release claims) |
-| [Hybrid Computer Use (HCU)](frameworks/hybrid-computer-use.md) | Unified Code / Accessibility (AX) / GUI interface, efficient observation and execution | [Paper](https://arxiv.org/abs/2610.41432) · [Code](https://github.com/microsoft/Hybrid-Computer-Use) · [Project](https://microsoft.github.io/Hybrid-Computer-Use) | Semantic actions, batched AX, diff observations |
+| [WebHarbor](environments/webharbor.md) | Offline GUI Web Environment、Web Agent Benchmark、RL Environment | [论文](https://arxiv.org/abs/2611.03634) · [代码](https://github.com/aiming-lab/WebHarbor) · [环境与模型](https://huggingface.co/collections/ChilleD/webharbor) | 作者报告 153 个环境、3,518 个任务 |
+| [Hybrid Computer Use (HCU)](frameworks/hybrid-computer-use.md) | Code / AX / GUI 混合交互接口、Agent Harness | [论文](https://arxiv.org/abs/2610.41432) · [代码](https://github.com/microsoft/Hybrid-Computer-Use) · [项目主页](https://microsoft.github.io/Hybrid-Computer-Use) | AX 动作执行、批量操作、差量观察 |
 
-## Scope
+## 收录范围
 
-- **Foundations** — GUI grounding, visual perception, accessibility trees (AX), action representations, planning, memory, and error recovery.
-- **Interaction paradigms** — screenshot-and-click, browser automation, accessibility-based control, code/DOM/GUI hybrid control, mobile and desktop agents.
-- **Models and training** — vision-language models, action models, synthetic trajectories, supervised fine-tuning, reinforcement learning, and online adaptation.
-- **Benchmarks** — tasks, environments, evaluators, metrics, reproducibility, contamination, and generalization.
-- **Infrastructure** — simulators, virtual machines, containers, browsers, remote desktops, observation/action APIs, orchestration, concurrency, and tracing.
-- **Applications** — web workflows, office automation, software engineering, mobile apps, enterprise operations, and embodied or cross-device interfaces.
-- **Surveys and ecosystems** — academic surveys, open-source frameworks, datasets, model reports, labs, and industry systems.
+- **基础能力**：GUI Grounding、视觉感知、Accessibility Tree（AX）、动作表示、规划、记忆与错误恢复。
+- **交互范式**：Screenshot-and-Click、Browser Automation、AX、Code / DOM / GUI Hybrid Control、Mobile Agent、Desktop Agent。
+- **模型与训练**：Vision-Language Model、Action Model、Synthetic Trajectory、Supervised Fine-Tuning、Reinforcement Learning、Online Adaptation。
+- **Benchmark**：任务、Environment、Verifier、Metric、可复现性、数据污染和泛化能力。
+- **基础设施**：Simulator、Virtual Machine、Container、Browser、Remote Desktop、Observation / Action API、调度、并发及 Tracing。
+- **下游应用**：Web Workflow、Office Automation、Software Engineering、Mobile Apps、企业流程和跨设备交互。
+- **学术生态**：Survey、开源 Framework、Dataset、Model Report、研究团队与产业系统。
 
-## Organization
+## 仓库目录
 
-| Directory | Content |
+| 目录 | 内容 |
 | --- | --- |
-| `surveys/` | Field overviews, taxonomies, reading maps |
-| `papers/` | Research papers and technical reports |
-| `models/` | Model families, capabilities, training methods |
-| `benchmarks/` | Benchmark cards and evaluation infrastructure |
-| `environments/` | Simulators, GUI environments, runtime systems |
-| `frameworks/` | Agent harnesses, tools, open-source implementations |
-| `applications/` | Downstream tasks and deployment patterns |
-| `datasets/` | Training/evaluation data and trajectory formats |
+| `surveys/` | 领域综述、分类体系、阅读路线 |
+| `papers/` | 论文与技术报告 |
+| `models/` | 模型、能力和训练方案 |
+| `benchmarks/` | Benchmark 与评测基础设施 |
+| `environments/` | Simulator、GUI Environment、Runtime |
+| `frameworks/` | Agent Harness、交互工具与开源框架 |
+| `applications/` | 下游应用场景 |
+| `datasets/` | 训练/评测数据和 Trajectory 格式 |
 
-Directories will be created when they contain actual material.
+仅在有实际资料时创建对应目录。
 
-## Collection principles
+## 收录原则
 
-1. Prefer original papers, official documentation, source code, model cards, and benchmark repositories.
-2. Record publication/update dates, versions, links, licenses, and maintenance status.
-3. Separate confirmed source facts from analysis and speculation.
-4. Classify entries across multiple dimensions; do not force every work into one category.
-5. Emphasize recent work (especially 2025 onward) while retaining influential foundations.
-6. Record practical evaluation-engineering details: environment setup, dependencies, rollout control, scoring, cost, reproducibility, and failure modes.
+1. 优先参考论文、官方文档、源码、Model Card 和 Benchmark Repository。
+2. 记录发布日期、版本、原始链接、License 和维护状态。
+3. 明确区分作者报告、独立验证结果与分析推断。
+4. 允许一个项目属于多个研究方向，分类体系持续扩展。
+5. 重点关注 2025 年以来的新工作，同时保留重要的奠基性研究。
+6. 特别关注评测工程问题：环境部署、依赖、Rollout 控制、评分、成本、可复现性与失败模式。
 
-## Entry template
+## 条目模板
 
-For each substantial item, capture:
-
-- **Name / type / date / version**
-- **Primary sources** (paper, code, docs, project page)
-- **Problem and contribution**
-- **Input/output modalities and action space**
-- **Environment, dependencies, and deployment architecture**
-- **Training or evaluation methodology**
-- **Limitations, reproducibility, and known pitfalls**
-- **Related work / open questions**
+- **项目名称、类型、日期和版本**
+- **原始资料**：Paper、Code、Documentation、Project Page
+- **研究问题与核心贡献**
+- **输入/输出模态与 Action Space**
+- **Environment、依赖与部署架构**
+- **训练或评测方法**
+- **局限性、可复现性及常见问题**
+- **相关研究与后续问题**
 
 ## License
 
-No license has been selected yet. Content and external sources retain their respective rights.
+仓库尚未选择 License；外部论文、代码与数据遵循各自的授权条款。
