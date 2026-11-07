@@ -2,7 +2,14 @@
 
 A curated, evolving knowledge base for **GUI Agents**, **Computer Use Agents (CUA)**, and multimodal agents that perceive and act in digital environments.
 
-> Status: initialized. This repository is a collection framework; entries and findings will be added with primary-source references.
+> Status: initialized. Entries include primary-source links and research questions; deeper code/paper audits are tracked separately.
+
+## Collected work
+
+| Project | Focus | Sources | Notes |
+| --- | --- | --- | --- |
+| [WebHarbor](environments/webharbor.md) | Offline cloned websites, Web Agent benchmark, RL environment, task verifiers | [Paper](https://arxiv.org/abs/2611.03634) · [Code](https://github.com/aiming-lab/WebHarbor) · [Environments/model](https://huggingface.co/collections/ChilleD/webharbor) | 153 environments, 3,518 tasks (authors' release claims) |
+| [Hybrid Computer Use (HCU)](frameworks/hybrid-computer-use.md) | Unified Code / Accessibility (AX) / GUI interface, efficient observation and execution | [Paper](https://arxiv.org/abs/2610.41432) · [Code](https://github.com/microsoft/Hybrid-Computer-Use) · [Project](https://microsoft.github.io/Hybrid-Computer-Use) | Semantic actions, batched AX, diff observations |
 
 ## Scope
 
@@ -14,7 +21,7 @@ A curated, evolving knowledge base for **GUI Agents**, **Computer Use Agents (CU
 - **Applications** — web workflows, office automation, software engineering, mobile apps, enterprise operations, and embodied or cross-device interfaces.
 - **Surveys and ecosystems** — academic surveys, open-source frameworks, datasets, model reports, labs, and industry systems.
 
-## Organization (planned)
+## Organization
 
 | Directory | Content |
 | --- | --- |
